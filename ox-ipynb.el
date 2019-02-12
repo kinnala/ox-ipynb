@@ -61,7 +61,7 @@
   :group 'ox-ipynb)
 
 
-(defvar ox-ipynb-kernelspecs '((ipython . (kernelspec . ((display_name . "Python 3")
+(defvar ox-ipynb-kernelspecs '((python . (kernelspec . ((display_name . "Python 3")
                                                          (language . "python")
                                                          (name . "python3"))))
                                (R . (kernelspec . ((display_name . "R")
@@ -74,13 +74,13 @@
 
 
 (defvar ox-ipynb-language-infos
-  '((ipython . (language_info . ((codemirror_mode . ((name . ipython)
+  '((python . (language_info . ((codemirror_mode . ((name . python)
                                                      (version . 3)))
                                  (file_extension . ".py")
                                  (mimetype . "text/x-python")
                                  (name . "python")
                                  (nbconvert_exporter . "python")
-                                 (pygments_lexer . "ipython3")
+                                 (pygments_lexer . "python3")
                                  (version . "3.5.2"))))
     (R . (language_info . ((codemirror_mode . "r")
                            (file_extension . ".r")
@@ -394,7 +394,7 @@ those exist, default to ipython."
 				 :exports))
 		 (org-element-property :language src)))
 	     nil t)
-	   "ipython")))
+	   "python")))
 
 
 (defun ox-ipynb-split-text (s)
